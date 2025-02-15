@@ -3,3 +3,6 @@
   connection: local
   roles:
     - jobs
+  vars:
+    jobs:
+      - { name: sample, repo_name: learn-jenkins }
