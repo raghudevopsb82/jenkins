@@ -9,3 +9,8 @@
     jobs:
       #- { name: sample, repo_name: learn-jenkins }
       - { name: cart, repo_name: roboshop-cart, folder: CI }
+      - { name: catalogue, repo_name: roboshop-cart, folder: CI }
+      - { name: user, repo_name: roboshop-cart, folder: CI }
+      - { name: payment, repo_name: roboshop-cart, folder: CI }
+      - { name: shipping, repo_name: roboshop-cart, folder: CI }
+      - { name: frontend, repo_name: roboshop-cart, folder: CI }
