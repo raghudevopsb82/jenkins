@@ -1,0 +1,5 @@
+- name: Seed Jobs
+  hosts: localhost
+  connection: local
+  roles:
+    - jobs
