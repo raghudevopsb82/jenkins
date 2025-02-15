@@ -4,5 +4,8 @@
   roles:
     - jobs
   vars:
+    folders:
+      - { name: CI }
     jobs:
-      - { name: sample, repo_name: learn-jenkins }
+      #- { name: sample, repo_name: learn-jenkins }
+      - { name: cart, repo_name: roboshop-cart, folder: CI }
