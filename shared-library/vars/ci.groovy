@@ -10,7 +10,7 @@ def call() {
         }
       }
 
-      stage('static-code-analysis') {
+      stage('Code Quality') {
         steps {
           sh 'echo OK'
         }
