@@ -1,42 +1,31 @@
 def call() {
-  pipeline {
-    agent any
-
-    stages {
+  node {
 
       stage('app-dependencies') {
-        steps {
           sh 'echo OK'
-        }
       }
 
-      stage('Code Quality') {
-        steps {
-          sh 'echo OK'
-        }
-      }
-
-      stage('unit-tests') {
-        steps {
-          sh 'echo OK'
-        }
-      }
-
+    if("${BRANCH_NAME}" == "main") {
       stage('build-container-image') {
-        steps {
-          sh 'echo OK'
-        }
+        sh 'echo OK'
       }
 
       stage('push-to-image-registry') {
-        steps {
-          sh 'echo OK'
-        }
+        sh 'echo OK'
       }
+    } else if("${BRANCH_NAME}" =~ "PR-.*") {
+      stage('Code Quality') {
+        sh 'echo OK'
+      }
+      stage('unit-tests') {
+        sh 'echo OK'
+      }
+    } else {
+      stage('unit-tests') {
+        sh 'echo OK'
+      }
+    }
 
     }
-  }
-
-
 
 }
