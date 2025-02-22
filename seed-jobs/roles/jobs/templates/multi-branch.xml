@@ -31,7 +31,7 @@
                     <apiUri>https://api.github.com</apiUri>
                     <credentialsId>github-token</credentialsId>
                     <repoOwner>raghudevopsb82</repoOwner>
-                    <repository>learn-jenkins</repository>
+                    <repository>{{ item.repo_name }}</repository>
                     <repositoryUrl>https://github.com/raghudevopsb82/{{ item.repo_name }}</repositoryUrl>
                     <traits>
                         <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
